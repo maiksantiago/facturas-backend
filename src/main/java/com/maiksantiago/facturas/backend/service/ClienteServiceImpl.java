@@ -7,5 +7,4 @@ import org.springframework.stereotype.Service;
 @Service
 public class ClienteServiceImpl extends CommonServiceImpl<Cliente, CrudRepository<Cliente, Long>>
         implements ClienteService {
-
 }

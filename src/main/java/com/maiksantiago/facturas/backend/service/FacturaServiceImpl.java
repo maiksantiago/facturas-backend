@@ -7,5 +7,4 @@ import org.springframework.stereotype.Service;
 @Service
 public class FacturaServiceImpl extends CommonServiceImpl<Factura, CrudRepository<Factura, Long>>
         implements FacturaService {
-
 }

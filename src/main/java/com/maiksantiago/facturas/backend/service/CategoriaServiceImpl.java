@@ -7,5 +7,4 @@ import org.springframework.stereotype.Service;
 @Service
 public class CategoriaServiceImpl extends CommonServiceImpl<Categoria, CrudRepository<Categoria, Long>>
         implements CategoriaService {
-
 }

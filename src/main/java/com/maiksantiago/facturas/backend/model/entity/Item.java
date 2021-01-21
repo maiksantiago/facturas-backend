@@ -46,4 +46,13 @@ public class Item implements Serializable {
         this.producto = producto;
     }
 
+    @Override
+    public String toString() {
+        return "Item{" +
+                "id=" + id +
+                ", cantidad=" + cantidad +
+                ", producto=" + producto +
+                '}';
+    }
+
 }
