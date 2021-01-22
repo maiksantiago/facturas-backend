@@ -3,6 +3,7 @@ package com.maiksantiago.facturas.backend.model.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -30,6 +31,7 @@ public class Factura implements Serializable {
     @JoinColumn(name = "id_cliente")
     private Cliente cliente;
 
+    @NotEmpty(message = "Es necesario agregar al menos un 'Producto'.")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "id_factura")
