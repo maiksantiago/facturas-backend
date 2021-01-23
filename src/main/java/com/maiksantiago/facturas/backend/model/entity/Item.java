@@ -3,6 +3,7 @@ package com.maiksantiago.facturas.backend.model.entity;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 @Entity
@@ -15,8 +16,10 @@ public class Item implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull(message = "El campo 'Cantidad' no debe estar vacío.")
     private Integer cantidad;
 
+    @NotNull(message = "Es necesario seleccionar un 'Producto'.")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "id_producto")
