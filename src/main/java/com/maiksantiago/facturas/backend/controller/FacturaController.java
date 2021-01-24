@@ -9,10 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.ConstraintViolationException;
 import javax.validation.Valid;
-import java.util.ArrayList;
-import java.util.List;
 
 @RestController
 @RequestMapping("/api/facturas")
@@ -23,22 +20,10 @@ public class FacturaController extends CommonController<Factura, FacturaService>
 
     @PostMapping("/")
     public ResponseEntity<?> crear(@Valid @RequestBody Factura factura, BindingResult result) {
-        List<String> errores = new ArrayList<>();
-        Factura nuevaFactura = null;
         if (result.hasErrors()) {
             return this.validar(result);
         }
-        try {
-            nuevaFactura = service.save(factura);
-        } catch (ConstraintViolationException exception) {
-            if (exception.getClass().toString().equals("class javax.validation.ConstraintViolationException")) {
-                exception.getConstraintViolations().forEach(error -> {
-                    errores.add(error.getMessage());
-                });
-                return ResponseEntity.badRequest().body(errores);
-            }
-        }
-        return ResponseEntity.status(HttpStatus.CREATED).body(nuevaFactura);
+        return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(factura));
     }
 
     @PutMapping("/{id}")
