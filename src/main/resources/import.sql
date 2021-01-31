@@ -10,9 +10,8 @@ insert into clientes (nombre, apellido, direccion, telefono, correo_electronico)
 insert into clientes (nombre, apellido, direccion, telefono, correo_electronico) values ('Jane', 'Doe', 'Seattle, WA 98109', '0123456789', 'janedoe@gmail.com');
 
 -- facturas
-insert into facturas (fecha_emision, id_cliente) values ('2021-01-18', 1);
 insert into facturas (fecha_emision, id_cliente) values ('2021-01-20', 1);
 
 -- items
 insert into items (cantidad, id_producto, id_factura) values (2, 1, 1);
-insert into items (cantidad, id_producto, id_factura) values (2, 2, 2);
+insert into items (cantidad, id_producto, id_factura) values (2, 2, 1);
