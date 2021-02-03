@@ -1,97 +1,15 @@
 # Sistema de Facturas con Spring Boot
 
-## Servicio Facturas
+### Pre-requisitos
 
-###### GET
+- [OpenJDK](https://openjdk.java.net/)
+- [Maven](https://maven.apache.org/download.cgi)
+- [IntelliJ IDEA](https://www.jetbrains.com/es-es/idea/download/#section=windows) ó [STS](https://spring.io/tools)
 
-```
-localhost:8080/api/facturas
-localhost:8080/api/facturas/{id}
-```
+### Instalación
 
-###### POST
-
-```
-localhost:8080/api/facturas/
-```
-
-## Servicio Clientes
-
-###### GET
+Clonar el repositorio:
 
 ```
-localhost:8080/api/clientes
-localhost:8080/api/clientes/{id}
-```
-
-###### POST
-
-```
-localhost:8080/api/clientes
-```
-
-###### PUT
-
-```
-localhost:8080/api/clientes/{id}
-```
-
-###### DELETE
-
-```
-localhost:8080/api/clientes/{id}
-```
-
-## Servicio Productos
-
-###### GET
-
-```
-localhost:8080/api/productos
-localhost:8080/api/productos/{id}
-```
-
-###### POST
-
-```
-localhost:8080/api/productos
-```
-
-###### PUT
-
-```
-localhost:8080/api/productos/{id}
-```
-
-###### DELETE
-
-```
-localhost:8080/api/productos/{id}
-```
-
-## Servicio Categorias
-
-###### GET
-
-```
-localhost:8080/api/categorias
-localhost:8080/api/categorias/{id}
-```
-
-###### POST
-
-```
-localhost:8080/api/categorias
-```
-
-###### PUT
-
-```
-localhost:8080/api/categorias/{id}
-```
-
-###### DELETE
-
-```
-localhost:8080/api/categorias/{id}
+git clone https://github.com/maiksantiago/facturas-backend.git
 ```
