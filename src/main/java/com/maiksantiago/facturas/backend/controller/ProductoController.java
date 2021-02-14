@@ -30,4 +30,9 @@ public class ProductoController extends CommonController<Producto, ProductoServi
         return ResponseEntity.status(HttpStatus.CREATED).body(this.service.save(productoActual));
     }
 
+    @GetMapping("/filtrar/{nombre}")
+    public ResponseEntity<?> filtrarPorNombre(@PathVariable String nombre) {
+        return ResponseEntity.ok(service.findByNombre(nombre));
+    }
+
 }
